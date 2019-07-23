@@ -14,3 +14,6 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->get('/test-mail', 'Mail\MailController@testMail');
+$router->post('/send-mail', 'Mail\MailController@sendMail');
